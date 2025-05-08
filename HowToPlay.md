@@ -25,9 +25,8 @@ Your answer is **close**, but not a perfect match. Here's what that means for di
 ### 🚪 Doors
 - **Only the doors you actually open** are counted.
 - Example:
-  - **Entrance Hall** is considered to have **3 doors**, even though you only open two — one is visible but inaccessible.
+  - **Entrance Hall** is considered to have **3 doors**, even though there ius 4 — one is wherw you enter to start the game, you don't act to open.
   - **Chamber** is considered to have **4 doors**, even if you don’t choose them.
-- Yellow might appear if your door count is close, but not a perfect match.
 
 ### ⚖️ Logic (AND / OR Rules)
 - Some rooms **always** give something, others **might** give depending on conditions.
