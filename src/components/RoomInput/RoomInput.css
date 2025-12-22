@@ -1,0 +1,34 @@
+.room-input-form {
+  display: flex;
+  gap: 10px;
+}
+
+.room-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.2em;
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+  color: white;
+  font-family: inherit;
+}
+
+.room-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.guess-button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background: white;
+  color: #2c5ea8;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.guess-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

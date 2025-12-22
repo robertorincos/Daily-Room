@@ -1,7 +1,9 @@
+import Game from './components/Game/Game';
+
 function App() {
   return (
     <div>
-      <h1>Daily Room</h1>
+      <Game />
     </div>
   )
 }
