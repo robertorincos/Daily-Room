@@ -27,6 +27,11 @@ const Game = () => {
       return;
     }
 
+    if (guesses.some(g => g.room.id === guessedRoom.id)) {
+      alert('You have already guessed this room!');
+      return;
+    }
+
     const result = checkGuess(guessedRoom, targetRoom);
     setGuesses([result, ...guesses]);
 
@@ -39,6 +44,8 @@ const Game = () => {
 
   const latestGuess = guesses.length > 0 ? guesses[0].room : null;
   const latestGuessImage = latestGuess ? getRoomImage(latestGuess.name) : null;
+  
+  const availableRooms = rooms.filter(room => !guesses.some(guess => guess.room.id === room.id));
 
   return (
     <div className="game-container">
@@ -54,7 +61,7 @@ const Game = () => {
         <div className="inventory-section">
             <div className="inventory-header">
                 <h2>INVENTORY / GUESSES</h2>
-                <RoomInput onGuess={handleGuess} rooms={rooms} disabled={gameState !== 'playing'} />
+                <RoomInput onGuess={handleGuess} rooms={availableRooms} disabled={gameState !== 'playing'} />
             </div>
             <div className="inventory-list-container">
                 <GuessList guesses={guesses} />

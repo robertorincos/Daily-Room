@@ -635,7 +635,7 @@ export const rooms = [
     "doors": 2,
     "pay": ["1 Gem"],
     "receives": ["Sells Items"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": ["Corner"]
   },
   {
@@ -644,7 +644,7 @@ export const rooms = [
     "doors": 2,
     "pay": ["1 Gem"],
     "receives": ["Sells Food"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": ["Corner"]
   },
   {
@@ -653,7 +653,7 @@ export const rooms = [
     "doors": 1,
     "pay": ["1 Gem"],
     "receives": ["Sells Keys"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": ["Dead End"]
   },
   {
@@ -662,7 +662,7 @@ export const rooms = [
     "doors": 2,
     "pay": ["2 Gems"],
     "receives": ["Sells Luxury Items"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": []
   },
   {
@@ -671,7 +671,7 @@ export const rooms = [
     "doors": 1,
     "pay": ["1 Gem"],
     "receives": ["Swap Items"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": ["Dead End"]
   },
   {
@@ -680,7 +680,7 @@ export const rooms = [
     "doors": 2,
     "pay": ["1 Gem"],
     "receives": ["Sells Books"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": ["Corner"]
   },
   {
@@ -689,7 +689,7 @@ export const rooms = [
     "doors": 2,
     "pay": [],
     "receives": ["Sells Weapons", "Sells Armor"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": ["Corner"]
   },
   {
@@ -698,7 +698,7 @@ export const rooms = [
     "doors": 3,
     "pay": [],
     "receives": ["Sells Souvenirs", "Sells Upgrades"],
-    "color": "Green",
+    "color": "Yellow",
     "directions": []
   },
   {
