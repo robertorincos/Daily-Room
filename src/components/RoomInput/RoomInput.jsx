@@ -1,32 +1,22 @@
-import React, { useState } from 'react';
-import { getRoomImage } from '../../utils/images';
+import React from 'react';
 import './RoomInput.css';
 
-const RoomInput = ({ onGuess, rooms, disabled }) => {
-  const [input, setInput] = useState('');
+const RoomInput = ({ onGuess, rooms, disabled, value, onChange }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input.trim()) {
-      onGuess(input);
-      setInput('');
+    if (value.trim()) {
+      onGuess(value);
     }
   };
 
-  const previewImage = getRoomImage(input);
-
   return (
     <div className="room-input-wrapper">
-      {previewImage && (
-        <div className="room-preview">
-          <img src={previewImage} alt="Room Preview" />
-        </div>
-      )}
       <form onSubmit={handleSubmit} className="room-input-form">
         <input
           list="room-options"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
           placeholder="Enter room name..."
           disabled={disabled}
           className="room-input"

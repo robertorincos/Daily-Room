@@ -17,16 +17,20 @@ const GuessRow = ({ guess }) => {
   };
 
   return (
-    <div className="guess-row">
-      <div className="cell name-cell">
-        {roomImage && <img src={roomImage} alt="" className="row-icon" />}
-        <span>{room.name}</span>
-      </div>
-      <div className={getStatusClass(ATTRIBUTES.DOORS)}>{room.doors}</div>
-      <div className={getStatusClass(ATTRIBUTES.PAY)}>{formatArray(room.pay)}</div>
-      <div className={getStatusClass(ATTRIBUTES.RECEIVES)}>{formatArray(room.receives)}</div>
-      <div className={getStatusClass(ATTRIBUTES.COLOR)}>{room.color}</div>
-      <div className={getStatusClass(ATTRIBUTES.DIRECTIONS)}>{formatArray(room.directions)}</div>
+    <div className="guess-row-container">
+        <div className="guess-image-container">
+            {roomImage && <img src={roomImage} alt={room.name} className="guess-image" />}
+        </div>
+        <div className="guess-data-grid">
+            <div className="cell name-cell">
+                <span>{room.name}</span>
+            </div>
+            <div className={getStatusClass(ATTRIBUTES.DOORS)}>{room.doors}</div>
+            <div className={getStatusClass(ATTRIBUTES.PAY)}>{formatArray(room.pay)}</div>
+            <div className={getStatusClass(ATTRIBUTES.RECEIVES)}>{formatArray(room.receives)}</div>
+            <div className={getStatusClass(ATTRIBUTES.COLOR)}>{room.color}</div>
+            <div className={getStatusClass(ATTRIBUTES.DIRECTIONS)}>{formatArray(room.directions)}</div>
+        </div>
     </div>
   );
 };

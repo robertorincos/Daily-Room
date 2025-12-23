@@ -6,8 +6,7 @@
 }
 
 .guess-header {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   gap: 10px;
   font-weight: bold;
   text-transform: uppercase;
@@ -18,15 +17,23 @@
   letter-spacing: 1px;
 }
 
+.header-spacer {
+    width: 100px; /* Match image width */
+    flex-shrink: 0;
+}
+
+.header-data {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
 .header-cell {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.header-cell:first-child {
-  justify-content: center; /* Image shows centered ROOM header? Actually looks centered */
 }
 
 .guess-rows {
