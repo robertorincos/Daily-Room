@@ -72,6 +72,7 @@ const Game = () => {
       // Find unrevealed attributes
       const attributes = Object.values(ATTRIBUTES);
       const unrevealedAttributes = attributes.filter(attr => {
+          if (attr === ATTRIBUTES.NAME) return false;
           // Check if we have a correct guess for this attribute
           const hasCorrectGuess = guesses.some(g => g.results[attr] === STATUS.CORRECT);
           return !hasCorrectGuess;
