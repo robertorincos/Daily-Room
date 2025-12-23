@@ -1,26 +1,36 @@
 .guess-list-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+  width: 100%;
 }
 
 .guess-header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 10px;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 2px solid white;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
 }
 
 .header-cell {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-cell:first-child {
+  justify-content: center; /* Image shows centered ROOM header? Actually looks centered */
 }
 
 .guess-rows {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }

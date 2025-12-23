@@ -1,7 +1,7 @@
 .guess-row {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 5px;
+  gap: 10px;
 }
 
 .cell {
@@ -9,32 +9,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
   font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .name-cell {
   justify-content: flex-start;
-  padding-left: 10px;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.2);
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .correct {
   background-color: #4caf50; /* Green */
   color: white;
-  border-color: #4caf50;
 }
 
 .partial {
   background-color: #ffeb3b; /* Yellow */
   color: black;
-  border-color: #ffeb3b;
 }
 
 .incorrect {
   background-color: #f44336; /* Red */
   color: white;
-  border-color: #f44336;
 }
