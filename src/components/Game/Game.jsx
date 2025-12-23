@@ -42,9 +42,12 @@ const Game = () => {
     
     // Calculate coins
     let earnedCoins = 0;
-    Object.values(result.results).forEach(status => {
+    Object.entries(result.results).forEach(([attribute, status]) => {
         if (status === STATUS.CORRECT) {
-            earnedCoins += 1;
+            const alreadyCorrect = guesses.some(g => g.results[attribute] === STATUS.CORRECT);
+            if (!alreadyCorrect) {
+                earnedCoins += 1;
+            }
         }
     });
     setCoins(prev => prev + earnedCoins);
